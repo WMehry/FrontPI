@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="breadcrumb mb-0">
+<span class="primary-right-round"></span>
+<div class="container">
+<h1 class="text-white">Book A Court</h1>
+<ul>
+<li>Book A Court</li>
+
+
+<ul>
+    <li *ngFor = "let r of reservationTerrains">
+        {{r.numRes}}
+        {{r.etatReser}}
+        {{r.dateDebut}}
+        {{r.dateFin}}
+        {{r.terrain.nomTerrain}}
+        {{r.typeRes}}
+
+    <a class="nav-link" routerLink="/reservationTerrain"></a>
+       
+    </li>    
+ </ul>
+</ul>
+</div>
+</div>
+<app-footer ></app-footer>

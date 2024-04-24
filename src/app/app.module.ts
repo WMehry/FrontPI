@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -24,6 +23,18 @@ import { StaticsBarsHComponent } from './dashboard/statics-bars-h/statics-bars-h
 import { Form2Component } from './dashboard/form2/form2.component';
 import { FormVerticaleComponent } from './dashboard/form-verticale/form-verticale.component';
 import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizontal.component';
+import { ReservationTerrainComponent } from './reservation-terrain/reservation-terrain.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { TerrainComponent } from './terrain/terrain.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddTerrainComponent } from './add-terrain/add-terrain.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateTerrainComponent } from './update-terrain/update-terrain.component';
+import { DeleteTerrainComponent } from './delete-terrain/delete-terrain.component';
+    
 
 @NgModule({
   declarations: [
@@ -48,10 +59,24 @@ import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizo
     StaticsBarsHComponent,
     Form2Component,
     FormVerticaleComponent,
-    FormHorizontalComponent,],
+    FormHorizontalComponent,
+    ReservationTerrainComponent,
+    TerrainComponent,
+    EquipeComponent,
+    AddTerrainComponent,
+    UpdateTerrainComponent,
+    DeleteTerrainComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
