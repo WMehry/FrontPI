@@ -3,34 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { BlogServiceService } from './Blog/blog-service.service';
-
-
-
-
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -58,6 +31,9 @@ import { RegisterComponent } from './register/register.component';
 import { ListBlogbackComponent } from './Blog/list-blogback/list-blogback.component';
 import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
 import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
+import { AddTournoiComponent } from './Tournoi/add-tournoi/add-tournoi.component';
+import { ListTournoiComponent } from './Tournoi/list-tournoi/list-tournoi.component';
+import { DetailtournoiComponent } from './Tournoi/detailtournoi/detailtournoi.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +62,10 @@ import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
     RegisterComponent,
     ListBlogbackComponent,
     ListBlogComponent,
-    AddBlogComponent],
+    AddBlogComponent,
+    AddTournoiComponent,
+    ListTournoiComponent,
+    DetailtournoiComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
