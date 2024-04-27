@@ -13,6 +13,9 @@ import { TerrainComponent } from './terrain/terrain.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { AddTerrainComponent } from './add-terrain/add-terrain.component';
 import { UpdateTerrainComponent } from './update-terrain/update-terrain.component';
+import { ListTournoiComponent } from './Tournoi/list-tournoi/list-tournoi.component';
+import { AddTournoiComponent } from './Tournoi/add-tournoi/add-tournoi.component';
+import { DetailtournoiComponent } from './Tournoi/detailtournoi/detailtournoi.component';
 // import {  } from '';
 // import {  } from '';
 // import {  } from '';
@@ -27,6 +30,7 @@ const routes: Routes = [
   { path :'home', component: HomeComponent},
   //{ path :'addReservation', component: ReservationTerrainComponent},
   { path :'login', component: LoginComponent},
+  
 
 
   //----------------------------------Path yassin------------------------------
@@ -46,12 +50,9 @@ const routes: Routes = [
   { path :'addblog', component: AddBlogComponent},
   { path :'updateBlog/:id', component: UpdateBlogComponent},
   { path :'listBlogback', component: ListBlogbackComponent},
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
+  { path : 'tournois', component:ListTournoiComponent},
+  { path :'addtournoi', component: AddTournoiComponent},
+  { path :'detailtournoi/:id',component: DetailtournoiComponent},
   
 
 
