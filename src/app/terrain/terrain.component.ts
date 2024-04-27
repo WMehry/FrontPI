@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TerrainService } from '../services/terrain.service';
-import { Terrain } from '../models/terrain';
+import { Terrain } from '../Models/Terrain/terrain';
 @Component({
   selector: 'app-terrain',
   templateUrl: './terrain.component.html',

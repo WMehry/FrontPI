@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Terrain, TypeTerrain } from 'src/app/Models/terrain';
+import { Terrain, TypeTerrain } from 'src/app/Models/Terrain/terrain';
 import { TournoiService } from 'src/app/services/tournoi-service.service';
 
 @Component({

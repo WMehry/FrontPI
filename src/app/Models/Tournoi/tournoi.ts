@@ -1,6 +1,6 @@
-import { Equipe } from "../equipe";
-import { ReservationTerrain } from "../reservation-terrain";
-import { Terrain, TypeTerrain } from "../terrain";
+import { Equipe } from "../Equipe/equipe";
+import { ReservationTerrain } from "../Reservation/reservation-terrain";
+import { Terrain, TypeTerrain } from "src/app/Models/Terrain/terrain";
 
 export class Tournoi {
   numTournoi?: number;

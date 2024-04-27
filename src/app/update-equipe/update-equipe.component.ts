@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Equipe } from '../models/equipe';
+import { Equipe } from '../Models/Equipe/equipe';
 import { EquipeService } from '../services/equipe.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';

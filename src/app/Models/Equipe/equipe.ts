@@ -1,4 +1,4 @@
-import { Tournoi } from "./Tournoi/tournoi";
+import { Tournoi } from "../Tournoi/tournoi";
 
 export class Equipe {
     numevent!: number;

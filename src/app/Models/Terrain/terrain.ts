@@ -1,4 +1,4 @@
-import { ReservationTerrain } from "./reservation-terrain";
+import { ReservationTerrain } from "../Reservation/reservation-terrain";
 
 export class Terrain {
 numTerrain!: number;

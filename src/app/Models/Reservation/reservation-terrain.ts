@@ -1,5 +1,5 @@
-import { Tournoi } from "./Tournoi/tournoi";
-import { Terrain } from "./terrain";
+import { Tournoi } from "src/app/Models/Tournoi/tournoi";
+import { Terrain } from "../Terrain/terrain";
 
 export class ReservationTerrain {
     numRes!: number;
