@@ -1,20 +1,15 @@
+import { ReservationTerrain } from "./reservation-terrain";
+
 export class Terrain {
-        numTerrain?: number;
-        nomTerrain?: string;
-        imageTerrain?: string;
-        statusTerrain?: StatusTerrain;
-        typeTerrain?: TypeTerrain;
+numTerrain!: number;
+  nomTerrain!: string;
+  typeTerrain!: TypeTerrain;
+  reservations!: ReservationTerrain[];
+}
 
-    }
-
-    export enum StatusTerrain {
-        Reserve = 'Reserve',
-        Libre = 'Libre'
-      }
-      
-      export enum TypeTerrain {
-        Football = 'Football',
-        Basketball = 'Basketball',
-        Handball = 'Handball'
-      }
-      
+export enum TypeTerrain {
+    Football = 'Football',
+    Basketball = 'Basketball',
+    Handball = 'Handball'
+  }
+  

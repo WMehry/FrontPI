@@ -1,13 +1,14 @@
-//import { User } from './user'; // Import the User model if it exists
-//import { Tournoi } from './tournoi'; // Import the Tournoi model if it exists
+import { Tournoi } from "./Tournoi/tournoi";
 
 export class Equipe {
-  numequipe?: number;
-  nomEquipe?: string;
-  classement?: number;
-  nbMemEquipe?: number;
-  //chefEquipe?: User;
-  //tournoi?: Tournoi;
-  //membresEquipe?: User[];
-  //membresEnAttente?: User[];
+    numevent!: number;
+    nomevent!: string;
+    categorie!: string;
+    location!: string;
+    dateDebut!: Date;
+    dateFin!: Date;
+    image!: string;
+    nbParticipants!: number;
+    //tickets!: Ticket[];
+    tournois!: Tournoi[];
 }

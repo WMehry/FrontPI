@@ -1,4 +1,4 @@
-import { TypeTerrain } from './type-terrain';
+import { TypeTerrain } from "./terrain";
 
 describe('TypeTerrain', () => {
   it('should create an instance', () => {
