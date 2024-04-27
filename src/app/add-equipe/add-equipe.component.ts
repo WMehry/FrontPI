@@ -24,20 +24,7 @@ export class AddEquipeComponent {
   nbMemEquipe: new FormControl('', [Validators.required]),
   classement: new FormControl('', [Validators.required])
   });
-  save(){
-    this.equipeService.addEquipe(this.AddEquipeForm.value as any).subscribe(response => {
 
-      console.log('Terrain added successfully!', response);
-      alert('Terrain ajouté avec succès!');
-      this.router.navigate(['/terrains']);
-
-      // Optionally, you can reset the form after successful submission
-      this.AddEquipeForm.reset();
-    }, error => {
-      // Handle error if needed
-      console.error('Error adding terrain:', error);
-    });
-  }
   
 }
 
