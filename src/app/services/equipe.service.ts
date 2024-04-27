@@ -14,10 +14,12 @@ export class EquipeService {
   constructor(private httpClient: HttpClient) { }
 
   // Method to add an equipe
+//  addEquipe(equipe: Equipe, userId: number): Observable<Equipe> {
+//    return this.httpClient.post<Equipe>(this.API_URL + this.ENDPOINT_EQUIPES + "/add/" + userId, equipe);
+ // }
   addEquipe(equipe: Equipe, userId: number): Observable<Equipe> {
     return this.httpClient.post<Equipe>(this.API_URL + this.ENDPOINT_EQUIPES + "/add/" + userId, equipe);
   }
-
   // Method to update an equipe
   updateEquipe(equipe: Equipe): Observable<Equipe> {
     return this.httpClient.put<Equipe>(this.API_URL + this.ENDPOINT_EQUIPES + "/update", equipe);

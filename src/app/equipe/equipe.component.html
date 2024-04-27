@@ -1,12 +1,48 @@
-<p>equipe works!</p>
-<ul>
-    <li *ngFor = "let e of equipes">
-        {{e.numequipe}}
-        {{e.nomEquipe}}
-        {{e.classement}}
-        {{e.nbMemEquipe}}
+<app-navbar></app-navbar>
 
-    <a class="nav-link" routerLink="/equipes"></a>
-       
-    </li>    
- </ul>
+<div class="breadcrumb mb-0">
+    <span class="primary-right-round"></span>
+    <div class="container">
+        <h1 class="text-white">List des terrains</h1>
+   
+    </div></div>
+<div class="table-responsive">
+    <table class="table table-borderless datatable">
+        <thead class="thead-light">
+            <button class="btn btn-primary" routerLink="/addterrains
+            ">ajouter un terrain</button>
+
+            <tr>
+                <th>Id du equipe</th>
+                <th>nom equipe</th>
+                <th> nbMemEquipe</th>
+                <th>classement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container  *ngFor = "let e of equipes">
+                <tr>
+                    <td> {{e.numequipe}} </td>
+                    <td>
+                        <h2 class="table-avatar">
+                            <a href="#" class="avatar avatar-sm  flex-shrink-0"></a>
+                            <span class="table-head-name flex-grow-1">
+                                <a href="#">{{ e.nomEquipe }}</a>
+                            </span>
+                        </h2>
+                    </td>
+                    <td>{{ e.nbMemEquipe }}</td>
+                    <td>{{ e.classement }}</td>
+                  
+                    <td>
+                        <!-- Buttons for actions -->
+                        <button class="btn btn-primary"[routerLink]="['/updateterrain',e.numequipe]">Edit</button>
+                        <button class="btn btn-danger"*ngIf="e.numequipe">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+
+<app-footer></app-footer>

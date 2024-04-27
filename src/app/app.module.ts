@@ -33,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddTerrainComponent } from './add-terrain/add-terrain.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateTerrainComponent } from './update-terrain/update-terrain.component';
-import { DeleteTerrainComponent } from './delete-terrain/delete-terrain.component';
+import { UpdateEquipeComponent } from './update-equipe/update-equipe.component';
+import { AddEquipeComponent } from './add-equipe/add-equipe.component';
     
 
 @NgModule({
@@ -65,7 +66,8 @@ import { DeleteTerrainComponent } from './delete-terrain/delete-terrain.componen
     EquipeComponent,
     AddTerrainComponent,
     UpdateTerrainComponent,
-    DeleteTerrainComponent],
+    UpdateEquipeComponent,
+    AddEquipeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

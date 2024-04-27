@@ -1,0 +1,34 @@
+<form [formGroup]="AddEquipeForm"> <!-- Updated formGroup name -->
+
+    <h5>Numéro d'Équipe</h5> <!-- Adjusted form control label -->
+    <input class="form-control" type="text" formControlName="numEquipe"> <!-- Updated formControlName -->
+ 
+    <div class="alert alert-danger" *ngIf="AddEquipeForm.get('numEquipe')?.errors?.['required'] && AddEquipeForm.get('numEquipe')?.touched">
+      Le champ Numéro d'Équipe est obligatoire.
+    </div>
+   
+    <h5>Nom d'Équipe</h5> <!-- Adjusted form control label -->
+    <input class="form-control" type="text" formControlName="nomEquipe"> <!-- Updated formControlName -->
+ 
+    <div class="alert alert-danger" *ngIf="AddEquipeForm.get('nomEquipe')?.errors?.['required'] && AddEquipeForm.get('nomEquipe')?.touched">
+      Le champ Nom d'Équipe est obligatoire.
+    </div>
+   
+    <h5>Nombre de Membres dans l'Équipe</h5> <!-- Adjusted form control label -->
+    <input class="form-control" type="text" formControlName="nbMemEquipe"> <!-- Updated formControlName -->
+ 
+    <div class="alert alert-danger" *ngIf="AddEquipeForm.get('nbMemEquipe')?.errors?.['required'] && AddEquipeForm.get('nbMemEquipe')?.touched">
+      Le champ Nombre de Membres dans l'Équipe est obligatoire.
+    </div>
+ 
+    <h5>Classement</h5> <!-- Adjusted form control label -->
+    <input class="form-control" type="text" formControlName="classement"> <!-- Updated formControlName -->
+ 
+    <div class="alert alert-danger" *ngIf="AddEquipeForm.get('classement')?.errors?.['required'] && AddEquipeForm.get('classement')?.touched">
+      Le champ Classement est obligatoire.
+    </div>
+   
+    <!-- Adjusted submit button -->
+    <input type="submit" value="Save" (click)="save()" [disabled]="AddEquipeForm.invalid">
+ </form>
+ 
