@@ -25,11 +25,9 @@ export class ListTournoiComponent implements OnInit{
   deleteTournoi(id: number) {
     this.trService.deleteTournoi(id).subscribe(() => {
       console.log('Tournoi supprimé avec succès');
-      // Rafraîchir la liste des tournois après la suppression
       this.refreshTournois();
     }, error => {
       if (error.status === 500) {
-        // Gérer l'erreur de contrainte d'intégrité référentielle
         console.error('Erreur lors de la suppression du tournoi :', error);
         alert('Impossible de supprimer ce tournoi car il est associé à des réservations.');
       } else {
@@ -41,7 +39,6 @@ export class ListTournoiComponent implements OnInit{
   refreshTournois() {
     this.trService.getTournois().subscribe(
       (tournois) => {
-        // Mettre à jour la liste des tournois avec les nouvelles données
         this.listtournois = tournois;
         console.log('Liste des tournois rafraîchie avec succès', this.listtournois);
       })

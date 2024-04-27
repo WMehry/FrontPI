@@ -3,15 +3,14 @@
 <div class="card dashboard-card flex-fill">
     <div class="card-header card-header-info">
     <div class="card-header-inner">
-    <h4>My Bookings</h4>
-    <p>Expertly manage court bookings </p>
+    <h4>My Tournaments</h4>
     </div>
     <div class="card-header-btns">
     <nav>
     <div class="nav nav-tabs" role="tablist">
-    <button class="nav-link active" id="nav-Court-tab" data-bs-toggle="tab" data-bs-target="#nav-Court" type="button" role="tab" aria-controls="nav-Court" aria-selected="true">Court</button>
-    <button class="nav-link" id="nav-Coaching-tab" data-bs-toggle="tab" data-bs-target="#nav-Coaching" type="button" role="tab" aria-controls="nav-Coaching" aria-selected="false">Coaching</button>
-    </div>
+    <button class="nav-link active" id="nav-Court-tab" data-bs-toggle="tab" data-bs-target="#nav-Court" type="button" role="tab" aria-controls="nav-Court" aria-selected="true" [routerLink]="['/addtournoi']">Add tournoi</button>
+    
+</div>
     </nav>
     </div>
     </div>
@@ -27,7 +26,7 @@
     <img src="assets/img/booking/booking-02.jpg" alt="Booking">
     </a>
     <div class="academy-content">
-    <h6><a href="#" data-bs-toggle="modal" data-bs-target="#upcoming-court">eventname</a></h6>
+    <h6><a href="#" data-bs-toggle="modal" data-bs-target="#upcoming-court">tournoiname</a></h6>
     <span>{{tournoi.nomTournoi}}</span>
     <ul>
     <li> nombre d'equipe: {{tournoi.nbEquipes}}</li>
