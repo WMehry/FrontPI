@@ -82,10 +82,7 @@ import { DetailtournoiComponent } from './Tournoi/detailtournoi/detailtournoi.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDatepickerModule,
-    MatInputModule,
     FormsModule,
-    MatNativeDateModule,
     HttpClientModule,
     ReactiveFormsModule,
 ],
