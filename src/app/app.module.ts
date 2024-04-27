@@ -40,6 +40,9 @@ import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
 import { AddTournoiComponent } from './Tournoi/add-tournoi/add-tournoi.component';
 import { ListTournoiComponent } from './Tournoi/list-tournoi/list-tournoi.component';
 import { DetailtournoiComponent } from './Tournoi/detailtournoi/detailtournoi.component';
+import { ListEventComponent } from './Event/list-event/list-event.component';
+import { AddEventComponent } from './Event/add-event/add-event.component';
+import { UpdateEventComponent } from './Event/update-event/update-event.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import { DetailtournoiComponent } from './Tournoi/detailtournoi/detailtournoi.co
     AddBlogComponent,
     AddTournoiComponent,
     ListTournoiComponent,
-    DetailtournoiComponent],
+    DetailtournoiComponent,
+    ListEventComponent,
+    AddEventComponent,
+    UpdateEventComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,14 +1,12 @@
 import { Tournoi } from "../Tournoi/tournoi";
 
 export class Equipe {
-    numevent!: number;
-    nomevent!: string;
-    categorie!: string;
-    location!: string;
-    dateDebut!: Date;
-    dateFin!: Date;
-    image!: string;
-    nbParticipants!: number;
-    //tickets!: Ticket[];
-    tournois!: Tournoi[];
+    numequipe?: number;
+    nomEquipe?: string;
+    classement?: number;
+    nbMemEquipe?: number;
+    //chefEquipe?: User;
+    //tournoi?: Tournoi;
+    //membresEquipe?: User[];
+    //membresEnAttente?: User[];
 }
