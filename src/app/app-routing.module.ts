@@ -29,21 +29,19 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },  
   { path: 'navcon', component: NavbarconnectedComponent },
   { path: 'forget', component: ForgotPwdComponent },
+  
   // -----------------------------------------front ------------------------------------
   { path: 'home', component: HomeComponent},
   { path: 'offer/:idOffer', component: SimilatorComponent},
   { path: 'content', component: ContentComponent },
   { path: 'request/:id', component: RequestLoanComponent },
   { path: 'info', component: AddtionalinfoComponent },
-
-
   // -----------------------------------------back ------------------------------------
   { path: 'content', component: ContentComponent },
   { path: 'side', component: SidemenuComponent},
   { path: 'listoffer',component:ListOfferComponent},
   { path: 'listAmort',component:ListAmortizationComponent},
   { path: 'listrequests',component:ListRequestsComponent},
- 
   { path: '**', component: NotFoundComponent }
 
 ];

@@ -44,15 +44,12 @@ retrieveLoan(id: number): Observable<RequestLoan> {
 }
 
  // Add a loan and assign it to an offer
-addLoanAndAssignRequestToOffer(offerId: number, type: TypeAmort, file: File): Observable<RequestLoan> {
-  const headers = new HttpHeaders({ 
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${this.token}` });
+addLoanAndAssignRequestToOffer(idOffer: number, type: TypeAmort, file: File): Observable<RequestLoan> { 
   const formData = new FormData();
   formData.append('file', file);
-  formData.append('offerId', offerId.toString());
+  formData.append('offerId', idOffer.toString());
   formData.append('type', type.toString());
-  return this.http.post<RequestLoan>(`${this.baseUrl}/request_loan/add-loan-and-assign-to-offer/${offerId}/${type}`, formData, { headers })
+  return this.http.post<RequestLoan>(`${this.baseUrl}/request_loan/add-loan-and-assign-to-offer/${idOffer}/${type}`, formData)
     .pipe(
       catchError((error: any) => {
         console.error('Error adding loan:', error);

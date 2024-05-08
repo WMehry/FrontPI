@@ -16,6 +16,7 @@ export class RequestLoanComponent implements OnInit{
   
   reqForm!:FormGroup;
   requestLoan!:RequestLoan;
+  user!:User;
   @Input() offerLoan!: OfferLoan;
   @Output() selectedOfferId: EventEmitter<number> = new EventEmitter<number>();
 
@@ -33,7 +34,6 @@ export class RequestLoanComponent implements OnInit{
       (selectedOffer: OfferLoan) => {
         console.log('Selected Offer Loan:', selectedOffer);
         this.offerLoan = selectedOffer;
-        this.initializeForm();
       },
       (error) => {
         console.error('Error:', error);
@@ -41,90 +41,25 @@ export class RequestLoanComponent implements OnInit{
     );
     
   }
-
-  initializeForm(): void {
-    this.reqForm = this.fb.group({
-      reqDate: [this.getCurrentDate()],
-      offerTypeLoan: [''],
-      selectedTypeAmort: [''],
-      loanAmnt: [''],
-      loanPeriod: [''],
-      garantorFile: [null] // Initialize with null
-    });
-  }
+ 
   getCurrentDate(): string {
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().substring(0, 10); 
     return formattedDate;
   }
 
-  addRequest(): void {
-    if (!this.reqForm || !this.offerLoan) {
-      console.error('Form is invalid or offerLoan is missing');
-      return;
-    }
-  
-    const offerId = this.offerLoan.idOffer;
-    const type = this.reqForm.value.selectedTypeAmort;
-    const file = this.reqForm.value.garantorFile;
-    const loanAmnt = this.reqForm.value.loanAmnt;
-    const nbrMonth = this.reqForm.value.loanPeriod;
+  addRequest(){
     
-    let nbrYears: number | null = null;
-    if (this.offerLoan.typeLoan === 'PROJECT') {
-      nbrYears = this.reqForm.value.loanPeriod;
-    }
-    
-    console.log('Calculating repayment...');
-    console.log('idOffer:', offerId);
-    console.log('loanAmnt:', loanAmnt);
-    console.log('nbrMonth:', nbrMonth);
-    console.log('nbrYears:', nbrYears);
-    console.log('typeAmort:', type);
-  
-    this.requestServ.addLoanAndAssignRequestToOffer(offerId, type, file).subscribe(
-      (requestLoan) => {
-        console.log('Request loan added:', requestLoan);
-      },
-      (error) => {
-        console.error('Error adding request loan:', error);
-      }
-    );
   }
   
   
-  
-  
   get reqDate(){ return this. reqForm.get('reqDate');}
-  get typeLoan(){ return this. reqForm.get('typeLoan');}
   get typeAmrt(){ return this. reqForm.get('typeAmrt');}
   get loanAmnt(){ return this. reqForm.get('loanAmnt');}
   get nbrMonth(){ return this. reqForm.get('periode');}
   get nbrYears(){ return this. reqForm.get('periode');}
-  //get garantorFile(){ return this. reqForm.get('garantorFile');}
 
   /* 
-  addRequest(): void {
-    if (!this.reqForm.valid || !this.offerLoan) {
-      console.error('Form is invalid or offerLoan is missing');
-      return;
-    }
-
-    const offerId = this.offerLoan.idOffer;
-    const type = this.reqForm.get('selectedTypeAmort')!.value;
-    const file = this.garantorFile; 
-
-    this.requestServ.addLoanAndAssignRequestToOffer(offerId, type, file).subscribe(
-      (requestLoan) => {
-        console.log('Request loan added:', requestLoan);
-        // Optionally, emit an event or perform any other action upon successful addition
-      },
-      (error) => {
-        console.error('Error adding request loan:', error);
-        // Optionally, handle the error as per your application's requirement
-      }
-    );
-  }
   
   this is my entity
 import { OfferLoan } from './offer-loan';

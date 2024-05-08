@@ -46,7 +46,7 @@
                   <!-- Type Loan  -->
                   <div class="input-space">
                     <label class="mb-2">Type Loan</label>
-                    <select class="form-control"  placeholder="choose a type" name="typeLoan" formControlName="typeLoan" [(ngModel)]="offerForm.value.typeLoan">
+                    <select class="form-control"  placeholder="choose a type"  formControlName="typeLoan" [(ngModel)]="offerForm.value.typeLoan">
                       <option value="">choose a type</option>
                       <option *ngFor="let typeLoan of typeLoans" [ngValue]="typeLoan">{{typeLoan}}</option>
                     </select>  
