@@ -2,11 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ListBlogComponent } from './Blog/list-blog/list-blog.component';
-import { ListBlogbackComponent } from './Blog/list-blogback/list-blogback.component';
-import { UpdateBlogComponent } from './Blog/update-blog/update-blog.component';
-import { AddBlogComponent } from './Blog/add-blog/add-blog.component';
-import { BlogDetailsComponent } from './Blog/blog-details/blog-details.component';
+
+
 import { RegisterComponent } from './register/register.component';
 import { NavbarconnectedComponent } from './shared/navbarconnected/navbarconnected.component';
 import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
@@ -37,10 +34,7 @@ const routes: Routes = [
   {path: 'similator', component:SimilatorMonthlyComponent},
 
   // -----------------------------------------back ------------------------------------
-  { path: 'listblog', component: ListBlogComponent },
-  { path: 'blogdetails/:id', component: BlogDetailsComponent },
-  { path: 'addblog', component: AddBlogComponent },
-  { path: 'updateBlog/:id', component: UpdateBlogComponent },
+
   { path: 'table', component: TableComponent },
 
   {
@@ -54,8 +48,15 @@ const routes: Routes = [
 
   { path: 'detailsEvent/:id', component: DetailsEventComponent },
 
+  { path :'',redirectTo:'home',pathMatch:'full'},
+  { path :'home', component: HomeComponent},
+  //{ path :'addReservation', component: ReservationTerrainComponent},
+  { path :'login', component: LoginComponent},
+  
+
 
   { path: 'detailsShareholder/:id', component: DetailsShareholderComponent },
+
 
 
   { path: 'UpdateEvent/:id', component: UpdateEventComponent },
@@ -88,8 +89,8 @@ const routes: Routes = [
     path: 'EventStatistics', component:EventStatisticsComponent
    
   },
-  
-];
+
+]
 
 
 

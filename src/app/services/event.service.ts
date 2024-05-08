@@ -1,4 +1,5 @@
 
+
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -15,6 +16,7 @@ import * as XLSX from 'xlsx';
   providedIn: 'root'
 })
 export class EventService {
+
   private baseUrl = 'http://localhost:8084/Event/all';
   private baseUrl10 = 'http://localhost:8084/Event/events'
   private baseUrl4 = 'http://localhost:8084/Event/delete';
@@ -132,4 +134,5 @@ getEventInfo(): Observable<string> {
  
  
 }
+
 

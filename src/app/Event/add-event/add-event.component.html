@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+<section class="card booking-form">
+  <h3 class="border-bottom">Booking Form</h3>
+<form [formGroup]="AddEventForm">
+ 
+  <h5>Nom Evenement</h5>
+  <input class="form-control" type="text" formControlName="nomEvent">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('nomEvent')?.errors?.['required'] && AddEventForm.get('nomEvent')?.touched">
+    Le champ nom d'evenement est obligatoire.
+  </div>
+  
+  <h5>dateDebut</h5>
+  <input class="form-control" type="datetime-local" formControlName="dateDebut">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('dateDebut')?.errors?.['required'] && AddEventForm.get('dateDebut')?.touched">
+    Le champ dateDebut est obligatoire.
+  </div>
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('dateDebut')?.errors?.['dateTimeFormat']">
+    Format de date et heure invalide. Le format doit être YYYY-MM-DDTHH:MM.
+  </div>
+    
+  <h5>dateFin</h5>
+  <input class="form-control" type="datetime-local" formControlName="dateFin">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('dateFin')?.errors?.['required'] && AddEventForm.get('dateFin')?.touched">
+    Le champ dateFin est obligatoire.
+  </div>
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('dateFin')?.errors?.['dateTimeFormat']">
+    Format de date et heure invalide. Le format doit être YYYY-MM-DDTHH:MM.
+  </div>
+  
+  <h5>Nombre de participants</h5>
+  <input class="form-control" type="text" formControlName="nbParticipants">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('nbParticipants')?.errors?.['required'] && AddEventForm.get('nbParticipants')?.touched">
+    Le nombre de participants est obligatoire.
+  </div>
+  <h5>Categorie </h5>
+  <input class="form-control" type="text" formControlName="categorie">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('categorie')?.errors?.['required'] && AddEventForm.get('categorie')?.touched">
+    Le champ categorie est obligatoire.
+  </div>
+  <h5>Emplacement </h5>
+  <input class="form-control" type="text" formControlName="location">
+  <div class="alert alert-danger" *ngIf="AddEventForm.get('location')?.errors?.['required'] && AddEventForm.get('location')?.touched">
+    Le champ emplacement est obligatoire.
+  </div>
+  
+  <input class="btn btn-secondary btn-icon" type="submit" value="save" (click)="save()" [disabled]="AddEventForm.invalid">
+</form>
+</section>
+</div>
+<app-footer></app-footer>
