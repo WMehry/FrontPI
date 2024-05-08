@@ -1,6 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
+
+import { SimilatorComponent } from './similator/similator.component';
+import { ListOfferComponent } from './dashboard/list-offer/list-offer.component';
+import { ListRequestsComponent } from './dashboard/list-requests/list-requests.component';
+import { ListAmortizationComponent } from './dashboard/list-amortization/list-amortization.component';
+import { ContentComponent } from './dashboard/content/content.component';
+
+import { RequestLoanComponent } from './shared/request-loan/request-loan.component';
+import { AddtionalinfoComponent } from './shared/addtionalinfo/addtionalinfo.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 //-------------------hedi---------------------------------------
 
@@ -29,6 +41,14 @@ const routes: Routes = [
   { path: 'offer/:idOffer', component: SimilatorComponent},
   { path: 'content', component: ContentComponent },
   { path: 'request/:id', component: RequestLoanComponent },
+  { path: 'info', component: AddtionalinfoComponent },
+
+
+  // -----------------------------------------back ------------------------------------
+  { path: 'content', component: ContentComponent },
+  { path: 'side', component: SidemenuComponent},
+  { path: 'listoffer',component:ListOfferComponent},
+  { path: 'listAmort',component:ListAmortizationComponent},
   { path: 'listrequests',component:ListRequestsComponent},
  
   { path: '**', component: NotFoundComponent }
