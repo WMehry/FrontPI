@@ -10,7 +10,6 @@ export class UserService {
   
   private baseUrl = 'http://localhost:8084'; 
 
-  constructor() { }
 
   constructor(private http: HttpClient) { }
 
