@@ -3,25 +3,21 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 const BASE_URL = ['http://localhost:8084/'];
 
+export interface ChatBotResponseDto {
+  text: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class ChatbotserviceService {
-  private baseUrl = 'http://localhost:8084/chatbot/send';
+  private baseUrl = BASE_URL + 'chatbot/send';
 
   constructor(private http: HttpClient) {}
 
-  sendMessage(message: string): Observable<string> {
-    // Retrieve token from local storage
-    const jwt = localStorage.getItem('jwt');
-
-    // Set headers with token
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${jwt}`,
-      'Content-Type': 'application/json',
-    });
-
-    // Include headers in the request
-    return this.http.post<string>(this.baseUrl, message, { headers: headers });
+  sendMessage(message: string): Observable<ChatBotResponseDto> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const body = { message }; // Create request body with message
+    return this.http.post<ChatBotResponseDto>(this.baseUrl, body, { headers });
   }
 }

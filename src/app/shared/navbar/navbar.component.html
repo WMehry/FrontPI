@@ -10,13 +10,13 @@
           </span>
         </a>
         <a href="/home" class="navbar-brand logo">
-          <img src="assets/img/logo-img.png" class="img-fluid" alt="Logo" />
+          <img class="img-fluid" alt="Logo" />
         </a>
       </div>
       <div class="main-menu-wrapper">
         <div class="menu-header">
           <a href="/home" class="menu-logo">
-            <img src="assets/img/logo-img.png" class="img-fluid" alt="Logo" />
+            <img src="assets/img/logo-img.png" class="img-fluid small-logo "   alt="Logo" />
           </a>
           <a id="menu_close" class="menu-close" href="javascript:void(0);">
             <i class="fas fa-times"></i
@@ -24,6 +24,10 @@
         </div>
         <ul class="main-nav">
           <li class="active"><a href="/home">Home</a></li>
+        
+          
+    
+          
           <li class="has-submenu">
             <a href="#">Coaches <i class="fas fa-chevron-down"></i></a>
             <ul class="submenu">
@@ -90,7 +94,7 @@
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="our-teams.html">Our Team</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="events.html">Events</a></li>
+              <li><a [routerLink]="['/Event']">Events</a></li>
               <li class="has-submenu">
                 <a href="javascript:void(0);">Authentication</a>
                 <ul class="submenu">
@@ -127,9 +131,10 @@
             </ul>
           </li>
           <li class="has-submenu">
-            <a routerLink="/listblog">Blog</a>
+            <a routerLink="/addblog">Blog</a>
           </li>
-          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a [routerLink]="['/Event']">Events</a></li>
+          <li><a [routerLink]="['/side']">Dashboard</a></li>
           <li class="login-link">
             <a href="register.html">Sign Up</a>
           </li>
@@ -150,21 +155,18 @@
           </div>
           <ng-template #elseBlock>
             <div class="nav-link btn btn-white log-register">
-              <a routerLink="/login"
-                ><span><i class="feather-users"></i></span>Login</a
-              >
-              / <a routerLink="/register">Register</a>
+              <a routerLink="/login">
+                <span><i class="feather-users"></i></span>Login</a>
+               <a routerLink="/register">Register</a>
             </div>
           </ng-template>
         </li>
-        <li class="nav-item">
-                        <!-- <button (click)="logout()" routerLink="/login">Logout</button> -->
-
-          <a class="nav-link btn btn-secondary" href="add-court.html"
-            ><span><i class="feather-check-circle"></i></span>List Your Court</a
-          >
+        <li class="nav-item" >
+          <a class="btn"(click)="logout()" routerLink="/login">
+            <span> <i class="feather-users"></i> </span>Logout</a>
         </li>
       </ul>
     </nav>
+    
   </div>
 </header>

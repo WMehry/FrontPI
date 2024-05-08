@@ -2810,7 +2810,7 @@ input::placeholder {
 
 .bg-forgot {
 
-	background-image: url(../images/login-images/bg-forgot-password.jpg);
+	background-image: url(/src/assest/login-images/bg-forgot-password.jpg);
 
 	background-size: cover;
 
@@ -2824,7 +2824,7 @@ input::placeholder {
 
 .bg-lock-screen {
 
-	background-image: url(../images/login-images/bg-lock-screen.jpg);
+	background-image: url(/src/assest/images/login-images/bg-lock-screen.jpg);
 
 	background-size: cover;
 
@@ -2838,7 +2838,7 @@ input::placeholder {
 
 .bg-login {
 
-	background-image: url(../images/login-images/bg-login-img.jpg);
+	background-image: url(/src/assest/images/login-images/bg-login-img.jpg);
 
 	background-size: cover;
 
@@ -2853,7 +2853,7 @@ input::placeholder {
 
 .bg-register {
 
-	background-image: url(../images/login-images/bg-register-img.jpg);
+	background-image: url(/src/assest/images/login-images/bg-register-img.jpg);
 
 	background-size: cover;
 
@@ -2867,7 +2867,7 @@ input::placeholder {
 
 .bg-coming-soon {
 
-	background-image: url(../images/login-images/bg-register-img.jpg);
+	background-image: url(/src/assest/images/login-images/bg-register-img.jpg);
 
 	background-size: cover;
 

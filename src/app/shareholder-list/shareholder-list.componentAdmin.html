@@ -1,0 +1,70 @@
+<div class="Admin Dashboard">
+  <div class="panel-heading">
+      <h2>Shareholder List</h2>
+  </div> 
+
+  <div class="panel-body">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search by shareholder last name" [(ngModel)]="searchTerm">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="searchShareholder()">Search</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- No need to filter by availability for shareholders -->
+    </div>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Last Name</th>
+                  <th>First Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Partner</th>
+                  <th>Investment</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let shareholder of shareholders | async">
+                <td>{{ shareholder.lastNameShareholder }}</td>
+                <td>{{ shareholder.firstNameShareholder }}</td>
+                <td>{{ shareholder.email }}</td> 
+                <td>{{ shareholder.numTel }}</td>
+                <td>{{ shareholder.partner }}</td>
+                <td>{{ shareholder.investment }}</td>
+                <td><button (click)="shareholderDetails(shareholder.idShareholder)" class="btn btn-info">Details</button></td>
+                <button   style="float:right; margin:5px;" class="btn btn-danger" (click)="delete(shareholder)" >Delete</button>
+                
+                <!-- You can add update and delete buttons for shareholders if needed -->
+            </tr>
+        </tbody>
+      </table>
+      <button (click)="addShareholder()" class="btn btn-info">Add Shareholder</button>
+      <div>
+        <label for="type">Type de Shareholder:</label>
+        <select id="type" [(ngModel)]="selectedType">
+            <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+        </select>
+    </div>
+    
+      
+      <div>
+        <label for="investment">Investissement:</label>
+        <input type="number" id="investment" [(ngModel)]="investmentAmount">
+      </div>
+      
+      <button (click)="calculateInterestRate()">Calculer le taux d'intérêt</button>
+      
+      <div *ngIf="interestRate !== undefined">
+        <p>Le taux d'intérêt calculé est : {{ interestRate }}</p>
+      </div>
+
+      
+  </div>
+  <button type="submit" (click)="BacktoAdminDashboard()" class="btn btn-success">Back</button>
+  <google-chart
+  [data]="GoogleChartInterface"
+>
+</google-chart>
+
+</div>

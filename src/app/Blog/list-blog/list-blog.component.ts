@@ -14,7 +14,8 @@ export class ListBlogComponent implements OnInit {
   searchInput: string = '';
   sortBy: keyof Publication = 'dateCreation';
 
-  constructor(private blogService: BlogServiceService, private router: Router) { }
+  constructor(private blogService: BlogServiceService, 
+              private router: Router) { }
 
   ngOnInit(): void {
     this.fetchPublications();

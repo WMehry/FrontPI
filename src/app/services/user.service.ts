@@ -7,5 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  constructor() { }
+  private baseUrl = 'http://localhost:8084'; 
+
+  constructor(private http: HttpClient) { }
+
+  getCurrentUserRole(): Observable<string> {
+    return this.http.get<string>(`${this.baseUrl}/get-current-user-role`);
+  }
 }
