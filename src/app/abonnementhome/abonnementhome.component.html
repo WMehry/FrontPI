@@ -8,63 +8,63 @@
         </div>
     </div>
     <div class="container">
-        <div class="section-heading aos" >
-            <h2>How It <span>Works</span></h2>
-            <p class="sub-title">Simplifying the booking process for coaches, venues, and athletes.</p>
+        <div class="section-heading aos">
+            <h2>List of <span>Projects</span></h2>
+            <p class="sub-title">Invest today, reap rewards tomorrow; seize opportunities for financial growth</p>
         </div>
-        <div class="row justify-content-center ">
-            <div class="col-lg-4 col-md-6 d-flex">
-                <div class="work-grid w-100 aos" >
-                    <div class="work-icon">
-                        <div class="work-icon-inner">
-                            <img src="assets/img/icons/work-icon1.svg" alt="Icon">
-                        </div>
-                    </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 d-flex" *ngFor="let p of projects">
+                <div class="work-grid w-100 aos">
                     <div class="work-content">
-                        <h5>
-                            <a href="register.html">Join Us</a>
-                        </h5>
-                        <p>Quick and Easy Registration: Get started on our software platform with a simple
-                            account creation process.</p>
-                        <a class="btn" href="register.html">
-                            Register Now <i class="feather-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 d-flex">
-                <div class="work-grid w-100 aos" >
-                    <div class="work-icon">
-                        <div class="work-icon-inner">
-                            <img src="assets/img/icons/work-icon2.svg" alt="Icon">
+                        <h5>{{ p.nomProject }}</h5>
+                        <p class="card-text">{{ p.description }}</p>
+                        <ul class="list-group list-group-flush">
+                            <!-- Project details -->
+                            <li class="list-group-item">Status Project: {{ p.status_project }}</li>
+                            <li class="list-group-item">Status Invest: {{ p.status_Invest }}</li>
+                            <li class="list-group-item">Category: {{ p.categoryProject }}</li>
+                            <li class="list-group-item">Amount Invested: {{ p.amount_inv }}</li>
+                            <li class="list-group-item">Investment Value: {{ p.invest_value }}</li>
+                            <li class="list-group-item">Investment Need: {{ p.investNeed }}</li>
+                            <li class="list-group-item">Total Raising Investment: {{ p.total_raising_investment }}</li>
+                            <li class="list-group-item">Start Date: {{ p.date_debut }}</li>
+                            <li class="list-group-item">End Date: {{ p.date_fin }}</li>
+                        </ul>
+                        <div class="accordion-item mb-4" id="reviews">
+                            <div>
+                                <div>
+                                    <a href="javascript:void(0);" class="btn" data-bs-toggle="modal" data-bs-target="#add-review" (click)="openInvestmentModal(p)">Invest</a>
+                                </div>
+                            </div>
+                            <!-- Investment Modal -->
+                            <div class="modal custom-modal fade payment-modal" id="add-review" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="form-header modal-header-title">
+                                                <h4 class="mb-0">Invest</h4>
+                                            </div>
+                                            <a class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                <span class="align-center" aria-hidden="true"><i class="feather-x"></i></span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form (ngSubmit)="submitInvestmentForm()">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="input-space">
+                                                            <label class="form-label">Your Action <span>*</span></label>
+                                                            <input type="number" class="form-control" id="action-count" [(ngModel)]="actionCount" name="actionCount" placeholder="Enter how many actions you want to buy">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button (click)='submitInvestmentForm()' class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="work-content">
-                        <h5>
-                            <a href="coaches-list.html">Select Coaches/Venues</a>
-                        </h5>
-                        <p>Book Badminton coaches and venues for expert guidance and premium facilities.</p>
-                        <a class="btn" href="coaches-list.html">
-                            Go To Coaches <i class="feather-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 d-flex">
-                <div class="work-grid w-100 aos" >
-                    <div class="work-icon">
-                        <div class="work-icon-inner">
-                            <img src="assets/img/icons/work-icon3.svg" alt="Icon">
-                        </div>
-                    </div>
-                    <div class="work-content">
-                        <h5>
-                            <a href="coach-details.html">Booking Process</a>
-                        </h5>
-                        <p>Easily book, pay, and enjoy a seamless experience on our user-friendly platform.</p>
-                        <a class="btn" href="coach-details.html">
-                            Book Now <i class="feather-arrow-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>

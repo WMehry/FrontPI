@@ -10,13 +10,13 @@
           </span>
         </a>
         <a href="/home" class="navbar-brand logo">
-          <img src="assets/img/logo-img.png" class="img-fluid" alt="Logo" />
+          <img class="img-fluid" alt="Logo" />
         </a>
       </div>
       <div class="main-menu-wrapper">
         <div class="menu-header">
           <a href="/home" class="menu-logo">
-            <img src="assets/img/logo-img.png" class="img-fluid" alt="Logo" />
+            <img src="assets/img/logo-img.png" class="img-fluid small-logo "   alt="Logo" />
           </a>
           <a id="menu_close" class="menu-close" href="javascript:void(0);">
             <i class="fas fa-times"></i
@@ -127,7 +127,7 @@
             </ul>
           </li>
           <li class="has-submenu">
-            <a routerLink="/listblog">Blog</a>
+            <a routerLink="/AddProject">project</a>
           </li>
           <li><a href="contact-us.html">Contact Us</a></li>
           <li class="login-link">
@@ -150,19 +150,15 @@
           </div>
           <ng-template #elseBlock>
             <div class="nav-link btn btn-white log-register">
-              <a routerLink="/login"
-                ><span><i class="feather-users"></i></span>Login</a
-              >
-              / <a routerLink="/register">Register</a>
+              <a routerLink="/login">
+                <span><i class="feather-users"></i></span>Login</a>
+               <a routerLink="/register">Register</a>
             </div>
           </ng-template>
         </li>
-        <li class="nav-item">
-                        <!-- <button (click)="logout()" routerLink="/login">Logout</button> -->
-
-          <a class="nav-link btn btn-secondary" href="add-court.html"
-            ><span><i class="feather-check-circle"></i></span>List Your Court</a
-          >
+        <li class="nav-item" >
+          <a class="btn"(click)="logout()" routerLink="/login">
+            <span> <i class="feather-users"></i> </span>Logout</a>
         </li>
       </ul>
     </nav>

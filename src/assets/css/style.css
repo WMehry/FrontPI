@@ -50,6 +50,12 @@ Version      : 1.0
 
 ========================================*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap");
+
+.small-logo {
+  height: 50px;
+  width: 50px;
+}
+
 .add-court .venue-options ul, .appointment-info ul, .css-equal-content, .css-equal-heights {
   display: flex;
   display: -webkit-flex;
@@ -89,6 +95,7 @@ Version      : 1.0
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 
 .add-court.venue-coach-details form .accordion-item#includes .accordion-body ul li, .add-court.venue-coach-details form .accordion-item#amenities .accordion-body ul li, .add-court.venue-coach-details form .accordion-item#rules .add-rules, .appointment-available .amount-hour, .appointment-detail, .profile-info-box .profile-contact-info, .profile-groups .profile-detail-box .user-profile-detail ul, .profile-groups .profile-detail-box, .profile-groups, .deactive-modal .account-deactive .convenient-btns .btn span, .deactivate-account-blk, .prefer-role .prefer-list, .booking-days ul, .preview-tab > ul > li .preview-tabcontent .preview-tabname ul, .preview-tab > ul > li .preview-tabcontent, .preview-tab > ul, .add-wallet-amount ul li .add-wallet-checkbox, .add-wallet-amount ul li, .profile-card .profile-contact-details ul, .price-set-price, .profile-set-content ul, .profile-set-img, .profile-set-rating span, .profile-set-rating, .your-card .debit-card-blk, .your-card .your-card-head, .wallet-wrap ul, .wallet-wrap .wallet-bal .wallet-img, .wallet-wrap .wallet-bal, .chat-window .chat-cont-right .chat-footer .form-custom, .chat-window .chat-cont-right .chat-header .media, .chat-window .chat-cont-left .chat-users-list a.media .media-body > div:first-child .user-last-chat, .my-availability, .notification-coach .notify-box, .going-appoinment, .progress-titles ul.need-complete li, .progress-titles ul, .track-statistics .statistic-head, .table-search-top, .coach-active-blk, .court-tab-content .card-body .text-pink a, .academy-card .academy-info .academy-content ul li, .upcoming-card .academy-info .academy-content ul li, .payment-card .payment-info, .academy-info .academy-content ul li, .academy-info .academy-content ul, .academy-info, .appointment-info ul li .appointment-item, .statistics-grid, .dashboard-card .card-header-info, .blog-details .listing-item.blog-info .listing-content .listing-venue-owner.blog-detail-owner .navigation span, .toggle-sidebar .sidebar-header, .sidebar-group, .listing-page .listing-filter-group .listing-content .sidebar-heading, .map-right .available-info li, .avalbity-review.avalbity-review-list, .avalbity-review .avalibity-date span, .avalbity-review .avalibity-date, .avalbity-review ul, .coach-select, .sortby-section .sorting-info .sortby-filter-group .sortbyset, .sortby-section .sorting-info .sortby-filter-group, .venue-coach-details aside .listing-owner li .owner-info p, .venue-coach-details .accordion .accordion-item#includes .accordion-body ul li, .venue-coach-details .accordion .accordion-item#lesson-with-me .accordion-body ul li, .venue-coach-details .venue-info ul li a, .checkout aside .radio .form-check, .pagination-group, .price-wrap .price-card .price-body .features-price-list ul li, .testimonial-group .listing-venue-owner, .service-count-blk, .owl-carousel .owl-nav .owl-next i, .owl-carousel .owl-nav .owl-prev i, .private-venue .earn-list ul li, .start-your-journey .journey-list ul li, .list-reviews.near-review, .listing-item .listing-button .btn, .listing-item .listing-button.read-new span, .listing-item .listing-button.read-new ul li a, .listing-item .listing-details-group li span, .listing-item .listing-content.news-content .listing-venue-owner .navigation, .listing-item .listing-content.news-content .listing-venue-owner.listing-dates, .listing-item .listing-content ul li span, .header .header-navbar-rht.logged-in > li.has-arrow .user-header, .header .header-navbar-rht .nav-item .btn-secondary span, .header .header-navbar-rht .nav-item .btn-secondary, .dropdown-action .dropdown-menu .dropdown-item {
   display: -webkit-box;

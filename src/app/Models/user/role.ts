@@ -1,5 +1,5 @@
 export enum ERole {
-    ROLE_USER = 'Etudiant',
+    ROLE_USER = 'INVESTOR',
     ROLE_ADMIN = 'Admin',
 
 }

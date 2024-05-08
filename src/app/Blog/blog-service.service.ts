@@ -11,7 +11,7 @@ import { Comment } from '../Models/Comment/comment';
 })
 
 export class BlogServiceService {
-  private baseUrl='http://localhost:8083/publication' 
+  private baseUrl='http://localhost:8084/publication' 
 
   constructor(private http:HttpClient) { }
   getBlogList(): Observable<Publication[]> {
