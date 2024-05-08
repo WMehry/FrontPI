@@ -1,11 +1,38 @@
-
+<div class="loader-img">
+  <img src="assets/img/loader.png" class="img-fluid" alt="Global" />
+</div>
 
 <div class="main-wrapper authendication-pages">
   <div class="content">
-    <div class="container wrapper ">
-      <div class="row">
-        
-        <div class="col-12 col-lg-6 mx-auto">
+    <div class="container wrapper no-padding">
+      <div class="row no-margin vph-100">
+        <div class="col-12 col-sm-12 col-lg-6 no-padding">
+          <div class="banner-bg login">
+            <div class="row no-margin h-100">
+              <div class="col-sm-10 col-md-10 col-lg-10 mx-auto">
+                <div
+                  class="h-100 d-flex justify-content-center align-items-center"
+                >
+                  <div class="text-bg register text-center">
+                    <button
+                      type="button"
+                      class="btn btn-limegreen text-capitalize"
+                    >
+                      <i class="fa-solid fa-thumbs-up me-3"></i>Login User &
+                      Coach
+                    </button>
+                    <p>
+                      Log in right away for our advanced sports software
+                      solutions, created to address issues in regular sporting
+                      events and activities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-6 no-padding">
           <div class="dull-pg">
             <div
               class="row no-margin vph-100 d-flex align-items-center justify-content-center"
@@ -21,9 +48,16 @@
                   </a>
                 </header>
                 <div class="shadow-card">
-                  <h2>Welcome Back</h2>
-                  <p>Login into your account</p>
-                  
+                  <h2>Forget Password </h2><br>
+                  <p>Enter Your Email :</p>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+
+                    </li>
+                    <li class="nav-item" role="presentation">
+
+                    </li>
+                  </ul>
                   <div class="tab-content" id="myTabContent">
                     <div
                       class="tab-pane fade show active"
@@ -33,8 +67,7 @@
                     >
                       <form
                         action="https://dreamsports.dreamstechnologies.com/html/user-dashboard.html"
-                        [formGroup]="loginForm"
-                        (ngSubmit)="submitForm()"
+                        s
                       >
                         <div class="form-group">
                           <div class="group-img">
@@ -42,20 +75,14 @@
                             <input
                               type="text"
                               class="form-control"
-                              placeholder="Email / Username"
+                              placeholder="Email"
                               formControlName="email"
-                            />
+                            /><br><br>
                           </div>
                         </div>
                         <div class="form-group">
                           <div class="pass-group group-img">
                             <i class="toggle-password feather-eye-off"></i>
-                            <input
-                              type="password"
-                              class="form-control pass-input"
-                              placeholder="Password"
-                              formControlName="password"
-                            />
                           </div>
                         </div>
                         <div
@@ -73,16 +100,11 @@
                               >Remember Password</label
                             >
                           </div>
-                          <span
-                            ><a routerLink="/forget" class="forgot-pass"
-                              >Forgot Password</a
-                            ></span
-                          >
+
                         </div>
                         <button
                           class="btn btn-secondary register-btn d-inline-flex justify-content-center align-items-center w-100 btn-block"
                           type="submit"
-                          [disabled]="loginForm.invalid"
                         >
                           Sign In<i class="feather-arrow-right-circle ms-2"></i>
                         </button>

@@ -91,16 +91,17 @@
         ></span>
       </a>
     </div>
-    <div>
-      <input
-        type="text"
-        [(ngModel)]="message"
-        placeholder="Type your message..."
-      />
-      <button (click)="sendMessage()">Send</button>
-    </div>
-    <div *ngIf="response">
-      <p>{{ response }}</p>
-    </div>
+    <section class="section service-section">
+      <!-- Other content -->
+      <div class="chat-container">
+        <h2>Chat with Sporthome Assistant</h2>
+        <ul>
+          <li *ngFor="let message of chatHistory">
+            {{ message.text }}
+          </li>
+        </ul>
+       
+      </div>
+    </section>
   </div>
 </section>
