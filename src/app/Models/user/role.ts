@@ -1,5 +1,5 @@
 export enum ERole {
-    ROLE_USER = 'CUSTOMER', 
+    ROLE_USER = 'SHAREHOLDER',
     ROLE_ADMIN = 'ADMIN',
 
 }

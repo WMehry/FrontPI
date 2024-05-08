@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
 
+
 //-------------------wissal---------------------------------------
 import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
 
@@ -30,12 +31,29 @@ import { ValidateProjectComponent } from './Project/validate-project/validate-pr
 import { AddProjectComponent } from './Project/add-project/add-project.component';
 import { AbonnementhomeComponent } from './abonnementhome/abonnementhome.component';
 
+//-------------------sarah---------------------------------------
+
+
+import { AddEventComponent } from './add-event/add-event.component';
+import { EventListComponent } from './event-list/event-list.component';
+import { EventListComponentAdmin } from './event-list/event-list.componentAdmin';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { DetailsShareholderComponent } from './details-shareholder/details-shareholder.component';
+import { ShareholderListComponent } from './shareholder-list/shareholder-list.component';
+import { AddshareholderComponent } from './add-shareholder/add-shareholder.component';
+import { UpdateShareholderComponent } from './update-shareholder/update-shareholder.component';
+import { ShareholderListComponentAdmin } from './shareholder-list/shareholder-list.componentAdmin';
+import { DetailsEventComponent } from './details-event/details-event.component';
+import { AssignShareholderComponent } from './event-list/assign-shareholder.component';
+import { EventStatisticsComponent } from './event-list/EventStatisticsComponent';
+
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+
 
   { path: 'navcon', component: NavbarconnectedComponent },
   { path: 'register', component: RegisterComponent },
@@ -57,7 +75,7 @@ const routes: Routes = [
   { path: 'listAmort',component:ListAmortizationComponent},
   { path: 'listrequests',component:ListRequestsComponent},
  
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 
 
   { path: 'listProject', component: DisplayProjectComponent },
@@ -66,7 +84,58 @@ const routes: Routes = [
   { path: 'projectList', component: AbonnementhomeComponent },
 
 
+
+  {
+    path: 'AddShareholder', component:AddshareholderComponent
+   
+  },
+  {
+    path: 'AddEvent', component:AddEventComponent
+   
+  },
+
+  { path: 'detailsEvent/:id', component: DetailsEventComponent },
+  
+
+  { path: 'detailsShareholder/:id', component: DetailsShareholderComponent },
+
+
+
+  { path: 'UpdateEvent/:id', component: UpdateEventComponent },
+  {
+  path:'assign-shareholder/:idEvent',
+  component: AssignShareholderComponent
+},
+
+
+  { path: 'updateShareholder/:id', component: UpdateShareholderComponent },
+
+  {
+    path: 'Event', component:EventListComponent
+   
+  },
+ 
+  {
+    path: 'Shareholder', component:ShareholderListComponent
+   
+  },
+  {
+    path: 'ShareholderAdmin', component:ShareholderListComponentAdmin
+   
+  },
+  {
+    path: 'AdminEvent', component:EventListComponentAdmin
+   
+  },
+  {
+    path: 'EventStatistics', component:EventStatisticsComponent
+   
+  },
+
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
