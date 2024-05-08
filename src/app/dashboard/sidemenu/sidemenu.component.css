@@ -803,35 +803,22 @@ a:hover {
 }
 
 .sidebar-wrapper {
-
 	width: 260px;
-
 	height: calc(100% - 70px);
-
 	position: fixed;
-
 	top: 70px;
-
 	left: 0;
-
 	bottom: 0;
-
 	z-index: 16;
-
 	background: #fff;
-
 	border-right: 1px solid #e4e4e4;
-
 	box-shadow: none;
-
 	transition: all .2s ease-out;
 
 }
 
 .wrapper.toggled .top-header {
-
 	left: 80px;
-
 }
 
 .page-content-wrapper {
@@ -1041,7 +1028,7 @@ sup {
 
 }
 
-.sidebar-wrapper .metismenu li+li {
+.sidebar-wrapper .li+li {
 
 	margin-top: 5px;
 
@@ -2810,7 +2797,7 @@ input::placeholder {
 
 .bg-forgot {
 
-	background-image: url(../images/login-images/bg-forgot-password.jpg);
+	background-image: url(/src/assets/images/login-images/bg-forgot-password.jpg);
 
 	background-size: cover;
 
@@ -2824,7 +2811,7 @@ input::placeholder {
 
 .bg-lock-screen {
 
-	background-image: url(../images/login-images/bg-lock-screen.jpg);
+	background-image: url(/src/assets/images/login-images/bg-lock-screen.jpg);
 
 	background-size: cover;
 
@@ -2838,7 +2825,7 @@ input::placeholder {
 
 .bg-login {
 
-	background-image: url(../images/login-images/bg-login-img.jpg);
+	background-image: url(/src/assets/images/login-images/bg-login-img.jpg);
 
 	background-size: cover;
 
@@ -2853,7 +2840,7 @@ input::placeholder {
 
 .bg-register {
 
-	background-image: url(../images/login-images/bg-register-img.jpg);
+	background-image: url(/src/assets/images/login-images/bg-register-img.jpg);
 
 	background-size: cover;
 
@@ -2867,7 +2854,7 @@ input::placeholder {
 
 .bg-coming-soon {
 
-	background-image: url(../images/login-images/bg-register-img.jpg);
+	background-image: url(/src/assets/images/login-images/bg-register-img.jpg);
 
 	background-size: cover;
 

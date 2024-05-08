@@ -16,17 +16,15 @@ export class NavbarComponent {
       let jwtData = jwt.split('.')[1];
       let decodedJwtJsonData = window.atob(jwtData);
       this.decodedJwtData = JSON.parse(decodedJwtJsonData);
-      console.log('user ::::::::', this.decodedJwtData.sub);
+      console.log('user:', this.decodedJwtData.sub);
     }
   }
   logout() {
     this.authService.logout().subscribe(
       (response) => {
-        // Successful logout handling
         console.log('Logout successful');
       },
       (error) => {
-        // Error handling
         console.error('Logout error:', error);
       }
     );

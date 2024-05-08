@@ -560,6 +560,9 @@ $(function () {
 	var chart = new ApexCharts(document.querySelector("#chart8"), options);
 	chart.render();
 });
+
+
+
 jQuery('#location-map').vectorMap({
 	map: 'world_mill_en',
 	backgroundColor: 'transparent',

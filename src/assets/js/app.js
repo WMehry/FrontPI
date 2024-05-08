@@ -92,9 +92,14 @@ $(function () {
 		}
 	}),
 	// metismenu
-	$(function () {
+	/*$(function () {
 		$('#menu').metisMenu();
 	});
+	*/	
+	$(document).ready(function () {
+		$('#menu').metisMenu();
+	});
+
 	/* Back To Top */
 	$(document).ready(function () {
 		$(window).on("scroll", function () {
@@ -140,5 +145,5 @@ $(function () {
 });
 
 /* perfect scrol bar */
-new PerfectScrollbar('.header-message-list');
-new PerfectScrollbar('.header-notifications-list');
+//new PerfectScrollbar('.header-message-list');
+//new PerfectScrollbar('.header-notifications-list');
