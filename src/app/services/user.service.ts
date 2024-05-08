@@ -11,15 +11,15 @@ export class UserService {
   private baseUrl = 'http://localhost:8084'; 
 
 
+
   constructor(private http: HttpClient) { }
 
-  getCurrentUserRole(): Observable<string> {
-    return this.http.get<string>(`${this.baseUrl}/get-current-user-role`);
-  }
+  
 
   getCurrentUser(): Observable<User> {
     return this.http.get<User>(`${this.baseUrl}/api/v1/user/current`);
   }
   
   
+
 }

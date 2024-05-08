@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+
+
+//-------------------wissal---------------------------------------
 import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
 
 import { SimilatorComponent } from './similator/similator.component';
@@ -14,23 +17,26 @@ import { AddtionalinfoComponent } from './shared/addtionalinfo/addtionalinfo.com
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
-//-------------------hedi---------------------------------------
+//-------------------wassim---------------------------------------
 
 import { RegisterComponent } from './register/register.component';
 import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
 import { NavbarconnectedComponent } from './shared/navbarconnected/navbarconnected.component';
 import { HomeComponent } from './shared/home/home.component';
-// import {  } from '';
-// import {  } from '';
-// import {  } from '';
-// import {  } from '';
-// import {  } from '';
-// import {  } from '';
+
+//-------------------chaima---------------------------------------
+import { DisplayProjectComponent } from './Project/display-project/display-project.component';
+import { ValidateProjectComponent } from './Project/validate-project/validate-project.component';
+import { AddProjectComponent } from './Project/add-project/add-project.component';
+import { AbonnementhomeComponent } from './abonnementhome/abonnementhome.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+
   { path: 'navcon', component: NavbarconnectedComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forget', component: ForgotPwdComponent },
@@ -52,6 +58,13 @@ const routes: Routes = [
   { path: 'listrequests',component:ListRequestsComponent},
  
   { path: '**', component: NotFoundComponent }
+
+
+  { path: 'listProject', component: DisplayProjectComponent },
+  { path: 'validateProject', component: ValidateProjectComponent },
+  { path: 'AddProject', component: AddProjectComponent },
+  { path: 'projectList', component: AbonnementhomeComponent },
+
 
 ];
 

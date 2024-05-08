@@ -1,11 +1,9 @@
 /*
 export const environment = {
     production: false,
-<<<<<<< HEAD
-    api_Url:'http://localhost:8084/',
-=======
+
     api_Url:'http://localhost:8084/PI/',
->>>>>>> 641e5ee5ecbb4e025b910383c904fc8b13685a61
+
   
   };
 

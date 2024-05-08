@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TokenStorageServiceService } from './token-storage-service.service';
+<<<<<<< HEAD
 import { User } from '../Models/user/user';
+=======
+>>>>>>> origin/investement
 
 const BASE_URL = 'http://localhost:8084/';
 
@@ -26,8 +29,11 @@ logout(): Observable<any> {
   return this.http.post(BASE_URL + 'api/v1/auth/logout', null);
 }
 
+<<<<<<< HEAD
 getCurrentUser(): User | null {
   return this.tokenStorageService.getUser(); 
 }
 
+=======
+>>>>>>> origin/investement
 }
