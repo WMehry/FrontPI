@@ -24,9 +24,27 @@ import { HomeComponent } from './shared/home/home.component';
     NavbarconnectedComponent,
     HomeComponent,
 
+    DisplayOfferComponent,
     LoginComponent,
     RegisterComponent, 
-    ForgotPwdComponent],
+    ForgotPwdComponent,
+
+    SidemenuComponent,
+  
+  
+    
+    ListOfferComponent,
+    ListRequestsComponent,
+    ListAmortizationComponent,
+    SimilatorComponent,
+    ContentComponent,
+    FooterDashComponent,
+    RequestLoanComponent,
+    AddtionalinfoComponent,
+    
+    NotFoundComponent,
+    
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +53,14 @@ import { HomeComponent } from './shared/home/home.component';
     HttpClientModule,
 
   ],
-  providers: [],
+
+  providers: [
+              AuthServiceService,
+              TokenStorageServiceService,
+              OfferLoanService,
+              RequestLoanService,
+              AmortizationService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

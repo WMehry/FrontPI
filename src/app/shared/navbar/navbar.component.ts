@@ -16,7 +16,7 @@ export class NavbarComponent {
       let jwtData = jwt.split('.')[1];
       let decodedJwtJsonData = window.atob(jwtData);
       this.decodedJwtData = JSON.parse(decodedJwtJsonData);
-      console.log('user ::::::::', this.decodedJwtData.sub);
+      console.log('user:', this.decodedJwtData.sub);
     }
   }
   logout() {
@@ -24,14 +24,15 @@ export class NavbarComponent {
       (response) => {
 
 
+
         // Clear local storage upon successful logout
         localStorage.removeItem('jwt'); // Replace 'your_storage_key' with the actual key you want to remove
         console.log('Local storage cleared');
         // Successful logout handling
+
         console.log('Logout successful');
       },
       (error) => {
-        // Error handling
         console.error('Logout error:', error);
       }
     );

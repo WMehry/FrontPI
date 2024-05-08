@@ -26,11 +26,13 @@ const routes: Routes = [
   // ------------------------------------------paths hedi-------------------------------------
 
   // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
-  // { path :'', component: },
+  { path: 'offer/:idOffer', component: SimilatorComponent},
+  { path: 'content', component: ContentComponent },
+  { path: 'request/:id', component: RequestLoanComponent },
+  { path: 'listrequests',component:ListRequestsComponent},
+ 
+  { path: '**', component: NotFoundComponent }
+
 ];
 
 @NgModule({
