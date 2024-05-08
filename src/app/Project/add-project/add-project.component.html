@@ -23,15 +23,15 @@
                                         </div>
                                         <div class="input-space">
                                             <label class="form-label">Description</label>
-                                            <textarea class="form-control" id="description" placeholder="Enter Description" formControlName="description" required></textarea>
+                                            <textarea class="form-control" id="description" placeholder="Enter Description" formControlName="description" minlength="50" required></textarea>
                                             <div *ngIf="projectForm.controls['description'].errors?.['required']" class="text-danger">Description is required.</div>
-                                            <div *ngIf="projectForm.controls['description'].errors?.['minlength']" class="text-danger">Description must be at least 150 characters long.</div>
+                                            <div *ngIf="projectForm.controls['description'].errors?.['minlength']" class="text-danger">Description must be at least 50 characters long.</div>
                                         </div>
                                         <div class="input-space">
                                             <label class="form-label">Total Amount</label>
-                                            <input type="number" class="form-control" id="amount" placeholder="Enter Amount" formControlName="amount_inv" min="0" required>
+                                            <input type="number" class="form-control" id="amount" placeholder="Enter Amount" formControlName="amount_inv" min="10" required>
                                             <div *ngIf="projectForm.controls['amount_inv'].errors?.['required']" class="text-danger">Total Amount is required.</div>
-                                            <div *ngIf="projectForm.controls['amount_inv'].errors?.['positive']" class="text-danger">Amount must be positive.</div>
+                                            <div *ngIf="projectForm.controls['amount_inv'].errors?.['min']" class="text-danger">Amount must be 10 or more.</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6">

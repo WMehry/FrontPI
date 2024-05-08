@@ -1,9 +1,8 @@
-// abonnementhome.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../Models/Project/project';
 import { ProjectService } from '../services/project.service';
 import { InvestmentService } from '../services/investment.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import FormBuilder and FormGroup
 import { Investment } from '../Models/Investment/investment';
 
 @Component({
@@ -14,83 +13,79 @@ import { Investment } from '../Models/Investment/investment';
 export class AbonnementhomeComponent implements OnInit {
   projects: Project[] = [];
   selectedProject: Project | null = null;
-  showInvestmentPopup = false;
   actionCount = 0;
-  selectedIdProject: string | undefined;
-  idInvestment: number | undefined;
+  selectedIdProject: number | undefined;
+
+  // Define investmentForm as a FormGroup property
+  investmentForm: FormGroup;
 
   constructor(
     private projectService: ProjectService,
-    private investmentService: InvestmentService
-  ) { }
+    private investmentService: InvestmentService,
+    private formBuilder: FormBuilder // Inject FormBuilder
+  ) {
+    // Initialize investmentForm in the constructor
+    this.investmentForm = this.formBuilder.group({
+      actionCount: ['', [Validators.required, Validators.min(1), Validators.max(80)]]
+    });
+  }
+
   ngOnInit(): void {
     this.loadProjects();
-    // Initialize selectedIdProject here if necessary
-    // Example: this.selectedIdProject = this.projects[0]?.id; // Assign the first project's ID
-    this.selectedIdProject = ''; // Initialize with an empty string
-    this.idInvestment = 0; // Initialize idInvestment to 0
-}
-
-  
-  
+  }
 
   loadProjects(): void {
     this.projectService.getAllProject().subscribe(
       data => {
         this.projects = data;
-        console.log('Offers:', this.projects);
+        console.log('Projects:', this.projects);
       },
       error => {
-        console.error('Error fetching offers:', error);
+        console.error('Error fetching projects:', error);
       }
     );
   }
-
   submitInvestmentForm(): void {
-    console.log('selectedIdProject:', this.selectedIdProject);
-    console.log('actionCount:', this.actionCount);
-  
-    // Convert selectedIdProject to a number
-    const projectId = Number(this.selectedIdProject);
-  
-    if (!isNaN(projectId) && typeof this.idInvestment === 'number') {
-      // Proceed with form submission
-      // Create an instance of the Investment class
-      const investment = new Investment();
-      investment.nbr_action = this.actionCount;
-      investment.date_inevt = new Date(); // You can replace this with the actual date you want to set
+    const projectId = this.selectedIdProject;
 
-      // Call the investment service to add the investment
-      this.investmentService.addInvestment(investment, investment.nbr_action, projectId).subscribe(
-        () => {
-          // Investment added successfully
-          console.log('Investment added successfully');
-          // Optionally, you can reload the projects list or perform any other action
-          this.loadProjects();
-        },
-        error => {
-          console.error('Error adding investment:', error);
-        }
-      );
+    if (projectId && this.selectedProject && this.actionCount > 0) {
+        // Assuming you have an Investment instance to pass to addInvestment method
+        const investment: Investment = {
+            // Populate with necessary properties
+            idInvestment: 0, // Replace with actual value
+            nbr_action: this.actionCount,
+            date_inevt: new Date()
+            // Add other properties as needed
+        };
+
+        this.investmentService.addInvestment(investment, this.actionCount, projectId).subscribe(
+            () => {
+                console.log('Investment added successfully');
+                this.loadProjects();
+                this.selectedProject = null;
+                this.selectedIdProject = undefined;
+                this.actionCount = 0;
+                this.investmentForm.reset();
+            },
+            error => {
+                console.error('Error adding investment:', error);
+            }
+        );
     } else {
-      console.error('Invalid investment data');
+        console.error('Invalid investment data');
     }
 }
 
 
 
-  
-  
-  
+
+
   openInvestmentModal(project: Project): void {
     this.selectedProject = project;
-    // Assign selectedIdProject based on the selected project
     if (project) {
-      this.selectedIdProject = String(project.idProject); // Assuming idProject represents the project's ID
+      this.selectedIdProject = project.idProject;
     } else {
-      // Clear selectedIdProject if no project is selected
       this.selectedIdProject = undefined;
     }
   }
-  
 }

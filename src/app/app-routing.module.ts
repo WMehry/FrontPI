@@ -56,8 +56,6 @@ const routes: Routes = [
   { path: 'listoffer',component:ListOfferComponent},
   { path: 'listAmort',component:ListAmortizationComponent},
   { path: 'listrequests',component:ListRequestsComponent},
- 
-  { path: '**', component: NotFoundComponent }
 
 
   { path: 'listProject', component: DisplayProjectComponent },
@@ -65,6 +63,9 @@ const routes: Routes = [
   { path: 'AddProject', component: AddProjectComponent },
   { path: 'projectList', component: AbonnementhomeComponent },
 
+  
+ 
+  { path: '**', component: NotFoundComponent },
 
 ];
 

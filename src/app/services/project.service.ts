@@ -13,7 +13,7 @@ export class ProjectService {
   private baseurl1 = 'http://localhost:8084/project/delete';
   
   private token =
-'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aXNzb2JlamFvdWlAZ21haWwuY29tIiwiaWF0IjoxNzE1MTc4MTM2LCJleHAiOjE3MTUyNjQ1MzZ9.gf8qDoBa6xdta8n_OyYj--dGRXvnBBD1fv4LMeVgg30'; 
+'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aXNzb2JlamFvdWlAZ21haWwuY29tIiwiaWF0IjoxNzE1MTg4NzMyLCJleHAiOjE3MTUyNzUxMzJ9.CzdnH3GAroqhJPiMvbXQD0h7tCpoi3w0zjyLuUHpS1M'; 
 
 
   constructor(private http:HttpClient) { }
@@ -38,26 +38,7 @@ getAllProject(): Observable<Project[]> {
 
     return this.http.post(`${this.apiUrl}/projects`, Project,{ headers: headers });
   }
-  /*addProject(project: Project): Observable<void> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${this.token}` // Ensure this.token holds the valid JWT token
-  });
-    return this.http.post(`${this.baseUrl2}`, Shareholder,{ headers: headers });
-  }*/
- /* validateProject(projectId: number): Observable<void> {
-    const headers = new HttpHeaders({
-      Authorization: 'Bearer ' + this.token,
-      'Content-Type': 'application/json'
-    });
-  
-    return this.http.put<void>(`${this.apiUrl}/validateProject?projectId=${projectId}`, {}, { headers }).pipe(
-      catchError((error: any) => {
-        console.error('Error validating project:', error);
-        return throwError('Something went wrong, please try again later.');
-      })
-    );
-  }*/
+
   validateProject(projectId: number): Observable<void> {
     const headers = new HttpHeaders({
       Authorization: 'Bearer ' + this.token,

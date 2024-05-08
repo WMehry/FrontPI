@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../Models/user/user';
 
 const TOKEN_KEY = 
-'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aXNzb2JlamFvdWlAZ21haWwuY29tIiwiaWF0IjoxNzE1MTczMDM3LCJleHAiOjE3MTUyNTk0Mzd9.vqTqpl6l8T-3avWhgcmK4PiL6Y01I2VehTvxiAfeC1o';
+'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aXNzb2JlamFvdWlAZ21haWwuY29tIiwiaWF0IjoxNzE1MTg4NzMyLCJleHAiOjE3MTUyNzUxMzJ9.CzdnH3GAroqhJPiMvbXQD0h7tCpoi3w0zjyLuUHpS1M';
 
 const USER_KEY = '9a4f2c8d3b7a1e6f45c8a0b3f267d8b1d4e6f3c8a9d2b5f8e3a9c8b5f6v8a3d9';
 @Injectable({

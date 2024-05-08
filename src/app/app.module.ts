@@ -40,7 +40,6 @@ import { AddtionalinfoComponent } from './shared/addtionalinfo/addtionalinfo.com
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AbonnementhomeComponent } from './abonnementhome/abonnementhome.component';
 import { ValidateProjectComponent } from './Project/validate-project/validate-project.component';
-import { AddProjectComponent } from './Project/add-project/add-project.component';
 import { DisplayProjectComponent } from './Project/display-project/display-project.component';
 import { StatisticsComponent } from './dashboard/statistics/statistics.component';
 import { ProjectService } from './services/project.service';
@@ -48,6 +47,8 @@ import { CategoryAnalysisComponent } from './Project/category-analysis/category-
 import { AverageInvestmentValueComponent } from './Project/average-investment-value/average-investment-value.component';
 import { DTCurrencyPipe } from './pipes/dt-currency.pipe';
 import { HighestLowestInvestmentsComponent } from './Project/highest-lowest-investments/highest-lowest-investments.component';
+import { AddProjectComponent } from './Project/add-project/add-project.component';
+import { InvestmentService } from './services/investment.service';
 
 
 
@@ -64,7 +65,6 @@ import { HighestLowestInvestmentsComponent } from './Project/highest-lowest-inve
     LoginComponent,
     RegisterComponent, 
     ForgotPwdComponent,
-
     SidemenuComponent,
     ListOfferComponent,
     ListRequestsComponent,
@@ -75,8 +75,6 @@ import { HighestLowestInvestmentsComponent } from './Project/highest-lowest-inve
     RequestLoanComponent,
     AddtionalinfoComponent,
     NotFoundComponent,
-
-    ProjectService,
     AbonnementhomeComponent,
     ValidateProjectComponent,
     AddProjectComponent,
@@ -105,7 +103,8 @@ import { HighestLowestInvestmentsComponent } from './Project/highest-lowest-inve
               OfferLoanService,
               RequestLoanService,
               AmortizationService,
-              ProjectService],
+              ProjectService,
+            InvestmentService],
 
 
   bootstrap: [AppComponent]
