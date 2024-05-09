@@ -1,0 +1,100 @@
+<app-sidemenu></app-sidemenu>
+<div class="page-wrapper">
+  <!--page-content-wrapper-->
+  <div class="page-content-wrapper">
+    <div class="page-content">
+      <!--end row-->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteUser(user?.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="page-wrapper">
+        <button class="btn btn-primary" (click)="toggleAddUserForm()">Add User</button>
+
+
+        <!-- Autres éléments du wrapper ici -->
+
+        <!-- Formulaire d'ajout d'utilisateur -->
+        <div class="add-user-form" *ngIf="showAddUserForm">
+          <h2>Ajouter un utilisateur</h2>
+          <form (ngSubmit)="addUser()">
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="user"
+                role="tabpanel"
+                aria-labelledby="user-tab"
+              >
+            <div class="form-group">
+              <div class="group-img">
+              <label for="firstname">Prénom:</label>
+              <input type="text" id="firstname" name="firstname" [(ngModel)]="newUser.firstname" required>
+            </div>
+
+            <div class="form-group">
+              <i class="feather-user"></i>
+              <label for="lastname">Nom de famille:</label>
+              <input type="text" id="lastname" name="lastname" [(ngModel)]="newUser.lastname" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" [(ngModel)]="newUser.email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Mot de passe:</label>
+              <input type="password" id="password" name="password" [(ngModel)]="newUser.password" required>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Rôle:</label>
+              <select id="role" name="role" [(ngModel)]="newUser.role" required>
+                <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+              </select>
+            </div>
+          </div>
+
+            <button  class="btn btn-secondary register-btn d-inline-flex justify-content-center align-items-center w-100 btn-block"
+            type="submit">Ajouter</button>
+
+          </div>
+          </div>
+        </form>
+
+
+        </div>
+
+
+        <!-- Tableau des utilisateurs existants -->
+        <div class="user-list">
+          <table class="table">
+            <!-- Tableau des utilisateurs ici -->
+          </table>
+        </div>
+
+      <!--end row-->
+    </div>
+  </div>
+  <!--end page-content-wrapper-->
+</div>

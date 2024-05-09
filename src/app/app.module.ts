@@ -13,6 +13,17 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarconnectedComponent } from './shared/navbarconnected/navbarconnected.component';
 import { HomeComponent } from './shared/home/home.component';
+import { CalendrierEventsComponent } from './dashboard/calendrier-events/calendrier-events.component';
+import { FormHorizontalComponent } from './dashboard/form-horizontal/form-horizontal.component';
+import { FormVerticaleComponent } from './dashboard/form-verticale/form-verticale.component';
+import { Form2Component } from './dashboard/form2/form2.component';
+import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
+import { StaticsBarsHComponent } from './dashboard/statics-bars-h/statics-bars-h.component';
+import { StaticsBarsVComponent } from './dashboard/statics-bars-v/statics-bars-v.component';
+import { StaticsCircleComponent } from './dashboard/statics-circle/statics-circle.component';
+import { TableComponent } from './dashboard/table/table.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { GestionAdminComponent } from './gestion-admin/gestion-admin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +37,22 @@ import { HomeComponent } from './shared/home/home.component';
 
     LoginComponent,
     RegisterComponent, 
-    ForgotPwdComponent],
+    ForgotPwdComponent,
+    CalendrierEventsComponent,
+    FormHorizontalComponent,
+    FormVerticaleComponent,
+    Form2Component,
+    SidemenuComponent,
+    StaticsBarsHComponent,
+    StaticsBarsVComponent,
+    StaticsCircleComponent,
+    TableComponent,
+    DashboardComponent,
+    GestionAdminComponent,
+    
+
+  ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
